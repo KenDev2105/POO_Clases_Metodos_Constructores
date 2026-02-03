@@ -35,15 +35,91 @@ class redes {
         console.log("Estudiante: " + this.nombre + " L1: " + this.L1 + " L2: " + this.L2 + " L3: " + this.L3 + " P1: " + this.P1 + " P2: " + this.P2 + " P3: " + this.P3 + " Nota final: " + prom_final);
     }
 }
-let estudiante1 = new POO("u20250017", "Ken", 19, 10, 10);
+// let estudiante1 = new POO("u20250017","Ken",19,10,10);
 // estudiante1.presentarEstudiante();
 // estudiante1.mostrarNotas();
-let estudiante2 = new redes("Ken", 10, 10, 10, 10, 10, 10);
+/*
+let estudiante2 =  new redes("Ken", 10,0,0,10,0,0);
 estudiante2.calcularNotas();
-/* Un GYM necesita un programa que evalué el IMC (índice de masa muscular) de
-los hombres y mujeres que mes a mes se inscriben en sus membresías, el
-cliente solicita que solo se coloquen sus datos respectivos para la formula y que
-el programa muestre el resultado de su IM */
-class GYM {
+ */
+/* class GYM{
+    peso:number;
+    altura:number;
+    constructor(peso:number, altura:number){
+        this.peso=peso;
+        this.altura=altura;
+    }
+
+    public imc():void{
+        let res = this.peso/this.altura**2
+        if(res < 18.5){
+            console.log("Usted tiene bajo peso " + res.toFixed(2))
+        } else if(res >= 18.5 && res <= 24.9){
+            console.log("Usted tiene un peso nomral " + res.toFixed(2))
+        } else if(res >= 25 && res <= 29.9){
+            console.log("Usted tiene sobrepeso " + res.toFixed(2))
+        } else if(res >= 30){
+            ("Usted tiene obesidad " + res.toFixed(2))
+        }
+    }
 }
+
+let cliente = new GYM(0, 2)
+cliente.imc() */
+/* class conversorTemperatura {
+    temp:number;
+
+    constructor(temp:number){
+    this.temp = temp
+    }
+
+    public FC(): void{
+        let res = (this.temp - 32) /1.8
+        console.log(res.toFixed(2))
+    }
+
+    public CF(): void{
+        let res = (this.temp * 1.8) + 32
+        console.log(res.toFixed(2))
+    }
+
+    public KF(): void{
+        let res = (this.temp - 273.15) * 1.8 + 32
+        console.log(res.toFixed(2))
+
+    }
+
+    public KC(): void{
+        let res = this.temp - 273.15
+        console.log(res.toFixed(2))
+    }
+}
+
+let temperatura = new conversorTemperatura(100);
+temperatura.FC()
+temperatura.CF()
+temperatura.KF()
+temperatura.KC() */
+class instituto {
+    constructor(estudiante, falta) {
+        this.estudiante = estudiante;
+        this.falta = falta;
+    }
+    infracción() {
+        if (this.falta == 1) {
+            console.log("Usted " + this.estudiante + " llegó tarde debe pagar $1");
+        }
+        else if (this.falta == 2) {
+            console.log("Usted " + this.estudiante + " anda fuera del aula en horarios de clase, debe pagar $3");
+        }
+        else if (this.falta == 3) {
+            console.log("Usted " + this.estudiante + " no trae la vestimenta apropiada, debe pagar $5");
+        }
+        else if (this.falta == 4) {
+            console.log("Usted " + this.estudiante + " no ha hecho uso adecuado de las instalaciónes, debe pagar $10");
+        }
+    }
+}
+let infra = new instituto("Pocho", 4);
+infra.infracción();
 //# sourceMappingURL=index.js.map
